@@ -1,0 +1,52 @@
+body {
+    background-color: #fff;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.text-red {
+    color: #DD2C00;
+}
+
+#main404 {
+    height: 100vh;
+    width: 100%;
+}
+
+#title img {
+    max-width: 70%;
+}
+
+input.link {
+    cursor: pointer;
+    background-color: #fff !important;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #343A40;
+}
+
+.copy-div {
+    cursor: pointer;
+    position: relative;
+}
+
+.copy-icons {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+
+.copy-icons svg {
+    transform: scale(0.7);
+}
+
+@media(max-width: 720px) {
+    #title img {
+        max-width: 90%
+    }
+}
