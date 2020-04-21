@@ -11,6 +11,14 @@ switch ($request_arr[1]) {
         require __DIR__ . '/views/pokemon.php';
         die();
         break;
+    case 'lorem' :
+        $meta_title = 'Lorem Ipsum Pokémon text generator';
+        $page = 'lorem';
+        break;
+    case 'generate_lorem' :
+        require __DIR__ . '/views/text.php';
+        die();
+        break;
     default:
         http_response_code(404);
         $meta_title = 'Sorry, Pokémon not found';
