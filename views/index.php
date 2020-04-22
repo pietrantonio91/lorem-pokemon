@@ -57,11 +57,6 @@
     reloadImage();
 
     window.onload = function() {
-
-        Array.from(document.getElementsByClassName('link')).forEach(element => element.addEventListener('click', function(e) {
-            return copyElement(e.target);
-        }));
-
         Array.from(document.getElementsByClassName('copy-div')).forEach(element => element.addEventListener('click', function(e) {
             return copyElement(e.target.closest('.copy-div').querySelector('.link'));
         }));
@@ -79,5 +74,14 @@
     function copyElement(el) {
         el.select();
         document.execCommand('copy');
+        let div = el.closest('.copy-div');
+        let sm = document.createElement('small');
+        sm.id = 'copied';
+        sm.style.position = 'absolute';
+        sm.innerText = 'Copied!';
+        div.appendChild(sm);
+        setTimeout(function() {
+            document.getElementById('copied').remove();
+        }, 1000)
     }
 </script>
