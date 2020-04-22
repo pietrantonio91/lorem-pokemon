@@ -2,9 +2,12 @@
 
 $request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $request_arr = explode('/', $request);
+$meta_title = 'Lorem Pokémon';
+$meta_description = 'Generate random Pokémon images.';
 switch ($request_arr[1]) {
     case '' :
         $meta_title = 'Lorem Pokémon Image Randomizer';
+        $meta_description = 'Generate random Pokémon images for your website or you projects, it\'s easy.';
         $page = 'index';
         break;
     case 'pokemon' :
@@ -13,6 +16,7 @@ switch ($request_arr[1]) {
         break;
     case 'lorem' :
         $meta_title = 'Lorem Ipsum Pokémon text generator';
+        $meta_description = 'Generate random Pokémon text (lorem ipsum) for your website or you projects, it\'s easy.';
         $page = 'lorem';
         break;
     case 'generate_lorem' :

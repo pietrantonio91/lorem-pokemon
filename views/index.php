@@ -41,6 +41,9 @@
                         Reload image
                     </button>
                 </p>
+                <p class="text-center">
+                    <small>All images are stored in our servers.</small>
+                </p>
                 <!-- <p id="imageLoader" style="display: none" class="font-weight-bold text-center">Loading new image...</p> -->
             </div>
             <div id="reloadImageWrapper" class="col-12 col-md-6 text-center d-flex justify-content-center align-items-center">

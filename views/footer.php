@@ -6,7 +6,7 @@
             <img src="./assets/img/pokeball.png" class="d-block ml-1" style="height: 1.3em" alt="">
         </p>
         <p>
-            <a href="" id="cntctm" class="text-muted">Contact me</a>
+            <a href="" id="cntctm" class="text-muted">✉️ Contact me</a> | <a class="text-muted" href="https://paypal.me/pietrajr" target="_blank">☕ Buy me a coffee!</a>
         </p>
     </div>
 </div>
