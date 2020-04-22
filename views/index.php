@@ -1,4 +1,4 @@
-<main id="main" style="display: none; min-height: 100vh;" class="bg-light p-5">
+<main id="main" style="min-height: 100vh;" class="bg-light p-5">
     <div class="container bg-white px-5">
         <?php include_once 'header.php'; ?>
         <div class="row">
@@ -52,16 +52,11 @@
         <?php include_once 'footer.php'; ?>
     </div>
 </main>
-<div id="loader" style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">
-    <p class="h2 text-center">PokéLoading...</p>
-</div>
 
 <script>
     reloadImage();
 
     window.onload = function() {
-        document.getElementById('loader').style.display = 'none';
-        document.getElementById('main').style.display = 'block';
 
         Array.from(document.getElementsByClassName('link')).forEach(element => element.addEventListener('click', function(e) {
             return copyElement(e.target);
