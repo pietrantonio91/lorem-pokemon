@@ -4,8 +4,7 @@ $read_env = [];
 try {
     // leggo il .env 
     $file_env = __DIR__ . '/.env';
-    $read_env = file_get_contents($file_env);
-    $read_env = explode("\n", $read_env);
+    $read_env = file($file_env);
 } catch (\Throwable $th) {
     //throw $th;
 }
