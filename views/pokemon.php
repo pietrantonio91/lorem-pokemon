@@ -1,5 +1,12 @@
 <?php 
 
+// se è settato un terzo parametro redirect
+if (isset($request_arr[3])) {
+    $seed = $request_arr[3];
+} else {
+    $seed = rand(1, 999);
+    header("Location: http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]/$seed");
+}
 // prendo un numero da 1 a 890 (max pokedex)
 $pokedex_id = rand(1, 890);
 // prendo l'immagine da questo archivio
@@ -9,6 +16,7 @@ $image = "./pokemon_images/$pokedex_id.png";
 // tipo di file
 $type = image_type_to_mime_type(exif_imagetype($image));
 
+// die("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
 header('Content-Type: '.$type);
 
 // parametro get per w e h
