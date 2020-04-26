@@ -52,7 +52,7 @@
                 </p>
             </div>
             <div id="reloadImageWrapper" class="col-12 col-md-6 text-center d-flex justify-content-center align-items-center">
-                <img id="reloadImage" src="<?= $base_url ?>/pokemon/300/">
+                <img id="reloadImage" class="mt-4" src="<?= $base_url ?>/pokemon/300/">
             </div>
         </div>
         <div class="row" id="generate_text" style="display: none;">

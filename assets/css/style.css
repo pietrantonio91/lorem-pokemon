@@ -47,6 +47,6 @@ input.link {
 
 @media(max-width: 720px) {
     #title img {
-        max-width: 90%
+        max-width: 90%;
     }
 }
