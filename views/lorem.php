@@ -1,4 +1,4 @@
-<main id="main" style="min-height: 100vh;" class="bg-light p-5">
+<main id="main" style="min-height: 100vh;" class="bg-light p-0 p-md-5">
     <div class="container bg-white px-5">
         <?php include_once 'header.php'; ?>
         <div class="row">
