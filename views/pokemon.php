@@ -1,12 +1,26 @@
 <?php 
 
 // se è settato un terzo parametro redirect
-if (isset($request_arr[3])) {
+if (isset($request_arr[3]) && $request_arr[3] != '') {
     $seed = $request_arr[3];
+    $side = (isset($request_arr[2]) && $request_arr[2] != '') ? $request_arr[2] : 500;
 } else {
     $seed = rand(1, 999);
-    header("Location: http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]/$seed");
+    if (isset($request_arr[2]) && $request_arr[2] != '') {
+        $side = $request_arr[2];
+        if($request_arr[3] === '')
+            header("Location: http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]$seed");
+        else
+            header("Location: http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]/$seed");
+    } else {
+        $side = 500;
+        if($_SERVER[REQUEST_URI] == '/pokemon')
+            header("Location: http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]/$side/$seed");
+        else
+            header("Location: http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]$side/$seed");
+    }
 }
+
 // prendo un numero da 1 a 890 (max pokedex)
 $pokedex_id = rand(1, 890);
 // prendo l'immagine da questo archivio
@@ -20,7 +34,6 @@ $type = image_type_to_mime_type(exif_imagetype($image));
 header('Content-Type: '.$type);
 
 // parametro get per w e h
-$side = $request_arr[2] ?? 500;
 if($side > 1920) $side = 1920;
 if($side == '') $side = 500;
 
