@@ -8,7 +8,7 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'UA-163807379-2');
+    gtag('config', 'UA-163807379-2', {'anonymize_ip': true});
     </script>
 
     <meta charset="UTF-8">
